@@ -1,18 +1,38 @@
+import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
   @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  late var _controller = ArCoreController(id: 0);
+
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        body: ArCoreView(
+          onArCoreViewCreated: (controller) {
+            _controller = controller;
+
+            _controller.addArCoreNode(
+              ArCoreNode(
+                shape: ArCoreSphere(
+                  radius: 0.1,
+                  materials: [ArCoreMaterial(color: Colors.blue)],
+                ),
+                position: const Vector3(0, 0, -1),
+              ),
+            );
+          },
         ),
       ),
     );
