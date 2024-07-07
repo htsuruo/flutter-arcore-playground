@@ -38,4 +38,10 @@ class _MainAppState extends State<MainApp> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 }
