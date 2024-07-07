@@ -1,5 +1,6 @@
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/material.dart';
+import 'package:vector_math/vector_math_64.dart' as vector;
 
 void main() {
   runApp(const MainApp());
@@ -29,7 +30,7 @@ class _MainAppState extends State<MainApp> {
                   radius: 0.1,
                   materials: [ArCoreMaterial(color: Colors.blue)],
                 ),
-                position: const Vector3(0, 0, -1),
+                position: vector.Vector3(0, 0, -1),
               ),
             );
           },
