@@ -24,13 +24,19 @@ class _MainAppState extends State<MainApp> {
           onArCoreViewCreated: (controller) {
             _controller = controller;
 
+            // `addArCoreNode`でNodeを配置
             _controller.addArCoreNode(
+              // 配置するNodeの定義（位置、形状、色など）
               ArCoreNode(
+                position: vector.Vector3(0, 0, -1),
+                // Nodeの形状(cube, sphere, cylinder, etc.)
                 shape: ArCoreSphere(
                   radius: 0.1,
-                  materials: [ArCoreMaterial(color: Colors.blue)],
+                  materials: [
+                    // ArCoreMaterialでカラーを指定
+                    ArCoreMaterial(color: Colors.blue),
+                  ],
                 ),
-                position: vector.Vector3(0, 0, -1),
               ),
             );
           },
