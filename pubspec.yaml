@@ -10,6 +10,7 @@ dependencies:
   arcore_flutter_plugin:
   flutter:
     sdk: flutter
+  vector_math:
 
 dev_dependencies:
   flutter_test:
