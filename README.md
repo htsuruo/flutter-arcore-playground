@@ -2,10 +2,20 @@
 
 - [arcore_flutter_plugin | Flutter package](https://pub.dev/packages/arcore_flutter_plugin)
   - 非公式パッケージで対応は***Androidのみ***
+  - iOSサポートはイシュー化されているものの当面対応は期待できなさそう
+    - ref. [(Question) Does this plugin support iOS Platform? · Issue #18 · giandifra/arcore_flutter_plugin](https://github.com/giandifra/arcore_flutter_plugin/issues/18)
 - arcore_flutter_pluginを使ったGeometric Shapesを配置するサンプル動画（Youtube）
   - [(93) ARCore Flutter Tutorial | Sceneform Android Studio | AR Geometric Shapes App | arcore_flutter_plugin - YouTube](https://www.youtube.com/watch?v=ks1Ko7i-QO0)
 - Geospatial API自体はFlutterの公式パッケージが存在しない模様
   - [Build global-scale, immersive, location-based AR experiences with the ARCore Geospatial API  |  Google for Developers](https://developers.google.com/ar/develop/geospatial)
+- Geospatial APIは[sceneview_flutter | Flutter package](https://pub.dev/packages/sceneview_flutter)が対応しているとのこと（ただしこちらもサポートはAndroidのみ）
+  - SceneViewの正体を探るところからだが、SceneFormというのが古い実装でSceneViewが新しい実装という位置づけぽい
+  - ref. https://github.com/giandifra/arcore_flutter_plugin/issues/203#issuecomment-1422434555
+  - しかもまだSkelton状態とのこと
+    - ref. https://github.com/giandifra/arcore_flutter_plugin/issues/202#issuecomment-1418755851
+- FlutterでARアプリを開発する場合は、ARKitとARCoreの合せ技が主流みたい?
+  - > FlutterにARKitとARCoreを組み合わせれば、Android向けとiOS向けのARアプリを同じコードベースで開発できるのではないか
+  - [[Flutter開発]FlutterとARCoreを組み合わせてAndroidのARアプリを作成してみる #Dart - Qiita](https://qiita.com/s_harada/items/44c50ea22d006b972897)
 
 ## ARCore Platform Setup
 
