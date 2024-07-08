@@ -19,11 +19,21 @@
 
 ## ARCore Platform Setup
 
-Google CloudでのARCore APIの有効化
-[Use the ARCore API on Google Cloud  |  Google for Developers](https://developers.google.com/ar/develop/authorization?platform=ios)
+### Android
+
+- [Configure your app](https://pub.dev/packages/arcore_flutter_plugin#configure-your-app)の通り
+
+### Kotlin Gradle plugin version 1.5.20 and higher
+
+> - What went wrong:
+The Android Gradle plugin supports only Kotlin Gradle plugin version 1.5.20 and higher.
+The following dependencies do not satisfy the required version:
+project ':arcore_flutter_plugin' -> org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.50
 
 ### iOS
 
+- Google CloudでのARCore APIの有効化
+  - [Use the ARCore API on Google Cloud  |  Google for Developers](https://developers.google.com/ar/develop/authorization?platform=ios)
 - CocoapodsまたはSwift Package ManagerでARCoreライブラリのインストール
   - [Geospatial API](https://developers.google.com/ar/develop/geospatial)を使用する場合は、`pod 'ARCore/Geospatial'`と指定
 - [Enable AR in your iOS app  |  ARCore  |  Google for Developers](https://developers.google.com/ar/develop/ios/enable-arcore)
