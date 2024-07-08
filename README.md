@@ -16,6 +16,9 @@
 - FlutterでARアプリを開発する場合は、ARKitとARCoreの合せ技が主流みたい?
   - > FlutterにARKitとARCoreを組み合わせれば、Android向けとiOS向けのARアプリを同じコードベースで開発できるのではないか
   - [[Flutter開発]FlutterとARCoreを組み合わせてAndroidのARアプリを作成してみる #Dart - Qiita](https://qiita.com/s_harada/items/44c50ea22d006b972897)
+- もはやFlutter上でUnity動かすとかにしたほうが良い説?
+  - ref. [tetsujp84/flutter_uaal](https://github.com/tetsujp84/flutter_uaal?tab=readme-ov-file)
+  > 本プロジェクトは、ARFoundation、ARKit、ARCoreを使用したアバタートラッキング機能と、iOS専用のフェイストラッキング機能を含みます
 
 ## ARCore Platform Setup
 
