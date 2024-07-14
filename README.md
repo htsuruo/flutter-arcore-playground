@@ -12,11 +12,12 @@
 - [arcore_flutter_plugin | Flutter package](https://pub.dev/packages/arcore_flutter_plugin)
   - 非公式パッケージで対応は***Androidのみ***
   - iOSサポートはイシュー化されているものの当面対応は期待できなさそう
-    - ref. [(Question) Does this plugin support iOS Platform? · Issue #18 · giandifra/arcore_flutter_plugin](https://github.com/giandifra/arcore_flutter_plugin/issues/18)
+    - ref. [giandifra/arcore_flutter_plugin#18](https://github.com/giandifra/arcore_flutter_plugin/issues/18)
   - 2024.07時点Kotlinバージョン周りの問題で最新masterでしかビルドが成功しない点に注意
   - [Issueもたくさん残っており](https://github.com/giandifra/arcore_flutter_plugin/issues)最近はあまり改善なさそう
   - `ArNode`のHot Reloadも効かないので開発しづらい
-  - Hot Restartを試みるとExitedとなりアプリケーションが終了してしまう問題 ref. [giandifra/arcore_flutter_plugin#231](https://github.com/giandifra/arcore_flutter_plugin/issues/231)
+  - Hot Restartを試みるとExitedとなりアプリケーションが終了してしまう問題
+    - ref. [giandifra/arcore_flutter_plugin#231](https://github.com/giandifra/arcore_flutter_plugin/issues/231)
 - arcore_flutter_pluginを使ったGeometric Shapesを配置するサンプル動画（Youtube）
   - [(93) ARCore Flutter Tutorial | Sceneform Android Studio | AR Geometric Shapes App | arcore_flutter_plugin - YouTube](https://www.youtube.com/watch?v=ks1Ko7i-QO0)
 - [ar_flutter_plugin | Flutter package](https://pub.dev/packages/ar_flutter_plugin)
