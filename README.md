@@ -1,24 +1,50 @@
 # flutter_arcore_geospatial_playground
 
+## ARCore関連のFlutterパッケージ
+
 - [arcore_flutter_plugin | Flutter package](https://pub.dev/packages/arcore_flutter_plugin)
   - 非公式パッケージで対応は***Androidのみ***
   - iOSサポートはイシュー化されているものの当面対応は期待できなさそう
     - ref. [(Question) Does this plugin support iOS Platform? · Issue #18 · giandifra/arcore_flutter_plugin](https://github.com/giandifra/arcore_flutter_plugin/issues/18)
 - arcore_flutter_pluginを使ったGeometric Shapesを配置するサンプル動画（Youtube）
   - [(93) ARCore Flutter Tutorial | Sceneform Android Studio | AR Geometric Shapes App | arcore_flutter_plugin - YouTube](https://www.youtube.com/watch?v=ks1Ko7i-QO0)
+- [ar_flutter_plugin | Flutter package](https://pub.dev/packages/ar_flutter_plugin)
+  - [arkit_plugin | Flutter package](https://pub.dev/packages/arkit_plugin) と[arcore_flutter_plugin | Flutter package](https://pub.dev/packages/arcore_flutter_plugin)を組み合わせて、iOS・Android両対応できるようにしたもの
+  - ARCore自体iOSも対応しているが、専用のパッケージがないのでARKitと併用しているということだろう
+
+## FlutterでAR開発する様々な選択肢
+
+- FlutterでARアプリを開発する場合は、ARKitとARCoreの合せ技が主流?
+  - 前述の`ar_flutter_plugin`使えば比較的簡単に実現できそう
+  - > FlutterにARKitとARCoreを組み合わせれば、Android向けとiOS向けのARアプリを同じコードベースで開発できるのではないか
+  - [[Flutter開発]FlutterとARCoreを組み合わせてAndroidのARアプリを作成してみる #Dart - Qiita](https://qiita.com/s_harada/items/44c50ea22d006b972897)
+
+### Unityとの組み合わせ
+
+- Unity as a LibraryでFlutterに組み込む
+  - Unity as a LibraryはUnityプロジェクトをiOS・Android・WebGLなどにエクスポートできる機能
+  - iOS・Androidにエクスポートし、MethodChannelでFlutterから呼び出す方法
+    - [juicycleff/flutter-unity-view-widget](https://github.com/juicycleff/flutter-unity-view-widget)が有名みたい
+    - Flutter Engineの上でUnityの3Dオブジェクトを表示しインタラクティブ操作も可能
+    - `postMessage`メソッドが肝でMethodChannel使っている
+      - 1. [postMessageのDart実装](https://github.com/juicycleff/flutter-unity-view-widget/blob/45fffb52e5e2c101bda435e396218b2ad9c56503/lib/src/io/device_method.dart#L248)
+      - 2. [プラットフォーム側の実装](https://github.com/juicycleff/flutter-unity-view-widget/blob/45fffb52e5e2c101bda435e396218b2ad9c56503/android/src/main/kotlin/com/xraph/plugin/flutter_unity_widget/FlutterUnityWidgetController.kt#L132)
+      - 3. `UnityPlayer.UnitySendMessage`でUnity関数をコール
+        - ref. [UnityでiOSとAndroidのネイティブプラグインを作るのは怖くない！ – cocone engineering](https://engineering.cocone.io/2023/11/14/unity-ios-android-native-plugin/)
+    - 活用事例
+      - ref. [tetsujp84/flutter_uaal](https://github.com/tetsujp84/flutter_uaal?tab=readme-ov-file)
+- FlutterをAdd-to-appでUnityに組み込む
+
+## Geospatial API関連
+
 - Geospatial API自体はFlutterの公式パッケージが存在しない模様
+  - 公式サイトに記載がなく、pub.devで探してみても野良のパッケージすら存在しない
   - [Build global-scale, immersive, location-based AR experiences with the ARCore Geospatial API  |  Google for Developers](https://developers.google.com/ar/develop/geospatial)
-- Geospatial APIは[sceneview_flutter | Flutter package](https://pub.dev/packages/sceneview_flutter)が対応しているとのこと（ただしこちらもサポートはAndroidのみ）
+- `ar_flutter_plugin`は[sceneview_flutter | Flutter package](https://pub.dev/packages/sceneview_flutter)でGeospatial APIに対応しているコメントあり（ただしこちらもサポートはAndroidのみ）
   - SceneViewの正体を探るところからだが、SceneFormというのが古い実装でSceneViewが新しい実装という位置づけぽい
   - ref. https://github.com/giandifra/arcore_flutter_plugin/issues/203#issuecomment-1422434555
   - しかもまだSkelton状態とのこと
     - ref. https://github.com/giandifra/arcore_flutter_plugin/issues/202#issuecomment-1418755851
-- FlutterでARアプリを開発する場合は、ARKitとARCoreの合せ技が主流みたい?
-  - > FlutterにARKitとARCoreを組み合わせれば、Android向けとiOS向けのARアプリを同じコードベースで開発できるのではないか
-  - [[Flutter開発]FlutterとARCoreを組み合わせてAndroidのARアプリを作成してみる #Dart - Qiita](https://qiita.com/s_harada/items/44c50ea22d006b972897)
-- もはやFlutter上でUnity動かすとかにしたほうが良い説?
-  - ref. [tetsujp84/flutter_uaal](https://github.com/tetsujp84/flutter_uaal?tab=readme-ov-file)
-  > 本プロジェクトは、ARFoundation、ARKit、ARCoreを使用したアバタートラッキング機能と、iOS専用のフェイストラッキング機能を含みます
 
 ## ARCore Platform Setup
 
