@@ -5,10 +5,10 @@ packages:
     dependency: "direct main"
     description:
       name: arcore_flutter_plugin
-      sha256: "48307e6e630cd991e5b08efd74a0869504631c828d4dc650d144c267a8b6ebfd"
+      sha256: "72c85c625f4f1c816226e91a2ab956b958938a8f33d2aae8375a7383523464a6"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.2.0-alpha"
   async:
     dependency: transitive
     description:
