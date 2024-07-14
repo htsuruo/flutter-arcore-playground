@@ -2,7 +2,7 @@
 
 ## Checklist
 
-- [ ] [arcore_flutter_plugin](https://pub.dev/packages/arcore_flutter_plugin)
+- [x] [arcore_flutter_plugin](https://pub.dev/packages/arcore_flutter_plugin)
 - [ ] [ar_flutter_plugin](https://pub.dev/packages/ar_flutter_plugin)
 - [ ] [flutter_unity_widget](https://pub.dev/packages/flutter_unity_widget)
 - [ ] [flutter_embed_unity](https://pub.dev/packages/flutter_embed_unity)
