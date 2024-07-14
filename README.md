@@ -24,7 +24,7 @@
 - Unity as a LibraryでFlutterに組み込む
   - Unity as a LibraryはUnityプロジェクトをiOS・Android・WebGLなどにエクスポートできる機能
   - iOS・Androidにエクスポートし、MethodChannelでFlutterから呼び出す方法
-    - [juicycleff/flutter-unity-view-widget](https://github.com/juicycleff/flutter-unity-view-widget)が有名みたい
+    - [juicycleff/flutter-unity-view-widget](https://github.com/juicycleff/flutter-unity-view-widget)が有名みたい（[flutter_unity_widget | Flutter package](https://pub.dev/packages/flutter_unity_widget)）
     - Flutter Engineの上でUnityの3Dオブジェクトを表示しインタラクティブ操作も可能
     - `postMessage`メソッドが肝でMethodChannel使っている
       - 1. [postMessageのDart実装](https://github.com/juicycleff/flutter-unity-view-widget/blob/45fffb52e5e2c101bda435e396218b2ad9c56503/lib/src/io/device_method.dart#L248)
@@ -33,7 +33,9 @@
         - ref. [UnityでiOSとAndroidのネイティブプラグインを作るのは怖くない！ – cocone engineering](https://engineering.cocone.io/2023/11/14/unity-ios-android-native-plugin/)
     - 活用事例
       - ref. [tetsujp84/flutter_uaal](https://github.com/tetsujp84/flutter_uaal?tab=readme-ov-file)
+    - 他にも調べてみたら最近のパッケージで[flutter_embed_unity | Flutter package](https://pub.dev/packages/flutter_embed_unity)も良さそう
 - FlutterをAdd-to-appでUnityに組み込む
+  - ref. [Flutter「を」Unity「へ」導入する | gihyo.jp](https://gihyo.jp/article/2024/04/flutter-unity-01)
 
 ## Geospatial API関連
 
