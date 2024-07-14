@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="com.htsuruo.flutter_arcore_geospatial_playground">
 
      <!-- ref. https://developers.google.com/ar/develop/java/enable-arcore#ar-required -->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -41,7 +42,8 @@
 
         <!-- "AR Required" app, requires "Google Play Services for AR" (ARCore)
          to be installed, as the app does not include any non-AR features. -->
-        <meta-data android:name="com.google.ar.core" android:value="required" />
+         <!-- `arcore_flutter_plugin`はoptionalなのでrequired指定したい場合はtools:replaceを追記 -->
+        <meta-data android:name="com.google.ar.core" android:value="required" tools:replace="android:value" />
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
