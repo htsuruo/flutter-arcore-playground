@@ -1,4 +1,4 @@
-# flutter_arcore_geospatial_playground
+# flutter_arcore_playground
 
 ## Checklist
 
