@@ -1,4 +1,4 @@
-# flutter_arcore_playground
+# Flutter ARCore Playground
 
 ## Checklist
 
