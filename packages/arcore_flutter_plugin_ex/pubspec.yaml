@@ -1,0 +1,25 @@
+name: flutter_arcore_playground
+description: 'A new Flutter project.'
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  # master版でないと起動できなかったため動作確認できたコミットを指定
+  arcore_flutter_plugin:
+    git:
+      url: https://github.com/giandifra/arcore_flutter_plugin.git
+      ref: 49e716172807e288a98e02fa7a8c567b57e58b45
+  flutter:
+    sdk: flutter
+  vector_math:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic_mono:
+
+flutter:
+  uses-material-design: true
