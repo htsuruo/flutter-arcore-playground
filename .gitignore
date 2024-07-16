@@ -1,7 +1,9 @@
 # Miscellaneous
 *.class
 *.log
+*.iml
 .DS_Store
+.idea/
 
 # Flutter/Dart/Pub related
 **/doc/api/

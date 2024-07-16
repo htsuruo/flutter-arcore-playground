@@ -1,0 +1,21 @@
+name: flutter_arcore_playground
+
+packages:
+  - ./packages
+
+sdkPath: '.fvm/flutter_sdk'
+
+scripts:
+  pub:upgrade:
+    exec: flutter pub upgrade
+    packageFilters:
+      flutter: true
+
+  fix:format:
+    exec: melos run fix && melos run format
+
+  fix:
+    exec: dart fix --apply .
+
+  format:
+    exec: dart format .
