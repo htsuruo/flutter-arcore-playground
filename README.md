@@ -30,6 +30,8 @@
   - 前述の`ar_flutter_plugin`使えば比較的簡単に実現できそう
   - > FlutterにARKitとARCoreを組み合わせれば、Android向けとiOS向けのARアプリを同じコードベースで開発できるのではないか
   - [[Flutter開発]FlutterとARCoreを組み合わせてAndroidのARアプリを作成してみる #Dart - Qiita](https://qiita.com/s_harada/items/44c50ea22d006b972897)
+- Redditでのディスカッション
+  - ref. [What is going on with ARCore & Flutter? : r/FlutterDev](https://www.reddit.com/r/FlutterDev/comments/1e3wuyh/what_is_going_on_with_arcore_flutter)
 
 ### Unityとの組み合わせ
 
