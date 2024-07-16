@@ -12,3 +12,6 @@
 .pub-cache/
 .pub/
 /build/
+
+# FVM Version Cache
+.fvm/
