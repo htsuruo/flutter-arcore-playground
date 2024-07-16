@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-          package="com.htsuruo.flutter_arcore_playground">
+          package="com.htsuruo.flutter_arcore_playground_ex">
 
      <!-- ref. https://developers.google.com/ar/develop/java/enable-arcore#ar-required -->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -9,7 +9,7 @@
     <uses-feature android:name="android.hardware.camera.ar" />
 
     <application
-        android:label="flutter_arcore_playground"
+        android:label="flutter_arcore_playground_ex"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
