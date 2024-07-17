@@ -19,6 +19,12 @@ include ':unityLibrary:xrmanifest.androidlib'
 - シンプルに`local.properties`の記載を削除すれば良い（ドキュメント通り実行すると必ず遭遇する）
   - ref. https://github.com/juicycleff/flutter-unity-view-widget/issues/832#issuecomment-1627557580
 
+---
+
+以降は、AR Foundationを利用する際に必要なセットアップと発生するエラー
+
+---
+
 ### MainActivity.kt: (3, 37): Unresolved reference: FlutterUnityActivity
 
 - `FlutterUnityActivity`の実装が入っているのは`master`だけらしい
