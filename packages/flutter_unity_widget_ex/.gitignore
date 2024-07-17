@@ -41,3 +41,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# unityプロジェクトは大きすぎるので監視対象からはずす
+/unity/*
+!/unity/.gitkeep
+
+# ExportされるunityLibraryも大きすぎるので監視対象からはずす
+**/unityLibrary/
+
