@@ -1,5 +1,9 @@
 # flutter_unity_widget_ex
 
+| AR Foundationの実行 |
+|--------|
+| ![](../../screenshot/flutter_unity_widget.png) |
+
 ## セットアップ時に遭遇したエラーと対策
 
 ドキュメント通り実行しても遭遇するエラーがいくつかあるので注意が必要。
@@ -50,4 +54,27 @@ fetch-pack: unexpected disconnect while reading sideband packet
 fatal: early EOF
 fatal: fetch-pack: invalid index-pack output
 exit code: 128
+```
+
+### pub getできないので`IFlutterUnityActivity`を作成する代替案で対応
+
+- CustomActivity用に[Platform Setup](https://github.com/juicycleff/flutter-unity-view-widget?tab=readme-ov-file#platform-specific-setup-after-unity-export)の3.2が記載されているが、要は`FlutterUnityActivity`相当の実装を用意すれば良いだけなので、バージョン`^2022.2.1`でも以下の`MainActivgity.kt`にすれば動く。
+
+```kt
+// MainActivity.kt
+package com.htsuruo.flutter_unity_widget_ex
+
+import io.flutter.embedding.android.FlutterActivity
+import com.xraph.plugin.flutter_unity_widget.IFlutterUnityActivity;
+
+class MainActivity: FlutterActivity(), IFlutterUnityActivity {
+    // unity needs this mUnityPlayer property
+    @JvmField
+    var mUnityPlayer: java.lang.Object? = null;
+
+    // implement this function so the FUW plugin can set mUnityPlayer
+    override fun setUnityPlayer(unityPlayer: java.lang.Object?) {
+        mUnityPlayer = unityPlayer;
+    }
+}
 ```
