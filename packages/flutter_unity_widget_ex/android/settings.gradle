@@ -27,3 +27,7 @@ include ":app"
 
 include ":unityLibrary"
 project(":unityLibrary").projectDir = file("./unityLibrary")
+
+// `could not be found in project ':unityLibrary'`エラー対策
+// ref. https://github.com/juicycleff/flutter-unity-view-widget/issues/844#issuecomment-1640963178
+include ':unityLibrary:xrmanifest.androidlib'
