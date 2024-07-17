@@ -2,4 +2,4 @@
 
 | ArCoreNodeの配置 |
 |--------|
-| ![](../../screenshot/arcore_flutter_plugin.jpeg) |
+| ![](../../screenshot/arcore_flutter_plugin.png) |
