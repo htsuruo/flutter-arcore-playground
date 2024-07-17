@@ -1,5 +1,9 @@
 # flutter_unity_widget_ex
 
+## セットアップ時に遭遇したエラーと対策
+
+ドキュメント通り実行しても遭遇するエラーがいくつかあるので注意が必要。
+
 ### could not be found in project ':unityLibrary'
 
 - おそらく大抵は遭遇する
