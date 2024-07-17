@@ -60,4 +60,5 @@ flutter {
 
 dependencies {
     implementation project(':unityLibrary')
+    implementation project(':flutter_unity_widget')
 }
